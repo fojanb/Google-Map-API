@@ -6,7 +6,7 @@ Simple app created by HTML, CSS, JavaScript and Maps JavaScript API.
 
 Before you start using the Maps JavaScript API, you need a project with a billing account and the Maps JavaScript API enabled. To learn more, see Set up in Cloud Console.
 
-#### Doc Sources :
+#### _Doc Sources_ :
 
 https://developers.google.com/maps/documentation/javascript/overview
 
