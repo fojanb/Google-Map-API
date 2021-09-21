@@ -47,7 +47,7 @@ Restricting API keys adds security to your application by ensuring only authoriz
    * b. Specify one or more referrer web sites. For example, _.google.com accepts all
    sites ending in google.com, such as https://developers.google.com.
    Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "**file_url**" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "**file_url**//path/to/_". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
-   ## API restrictions:
+   #### API restrictions:
    * a. Click Restrict key
    * b. Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is  
     not listed, you need to enable it.
