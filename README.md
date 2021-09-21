@@ -6,6 +6,7 @@ https://developers.google.com/maps/documentation/javascript/get-api-key
 <!-- ---------------------------- -->
 
 **Using API Keys**
+
 Google Maps Platform products are secured from unauthorized use by restricting API calls to those that provide proper authentication credentials. These credentials are in the form of an API key - a unique alphanumeric string that associates your Google billing account with your project, and with the specific API or SDK.
 
 This guide shows how to create, restrict, and use your API Key for Google Maps Platform.
