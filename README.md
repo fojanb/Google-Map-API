@@ -41,7 +41,7 @@ Restricting API keys adds security to your application by ensuring only authoriz
 
 2. Select the API key that you want to set a restriction on. The API key property page appears.
 3. Under Key restrictions, set the following restrictions:
-   _Application restrictions:_
+   ** Application restrictions:
    * a. To accept requests from the list of website that you supply, select HTTP
    referrers (web sites) from the list of Application restrictions.
    * b. Specify one or more referrer web sites. For example, _.google.com accepts all
