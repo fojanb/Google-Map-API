@@ -41,13 +41,13 @@ Restricting API keys adds security to your application by ensuring only authoriz
 
 2. Select the API key that you want to set a restriction on. The API key property page appears.
 3. Under Key restrictions, set the following restrictions:
-   _--Application restrictions:_
+   _Application restrictions:_
    * a. To accept requests from the list of website that you supply, select HTTP
    referrers (web sites) from the list of Application restrictions.
    * b. Specify one or more referrer web sites. For example, _.google.com accepts all
    sites ending in google.com, such as https://developers.google.com.
    Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "**file_url**" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "**file_url**//path/to/_". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
-   _--API restrictions:_
+   _API restrictions:_
    * a. Click Restrict key
    * b. Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is  
     not listed, you need to enable it.
