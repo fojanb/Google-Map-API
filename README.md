@@ -1,6 +1,6 @@
 # Google-Map-API
 
-Simple app created by HTML,CSS,JavaScript and Maps JavaScript API.
+Simple app created by HTML, CSS, JavaScript and Maps JavaScript API.
 
 #### Prerequisite :
 
@@ -57,5 +57,5 @@ Restricting API keys adds security to your application by ensuring only authoriz
     not listed, you need to enable it.
    *c. If your project uses Places Library, also select Places API. Similarly, if your
    project uses other services in the JavaScript API (Directions Service, Distance Matrix Service, Elevation Service, and/or Geocoding Service), you must also enable and select the corresponding API in this list.
-   
+
 4. To finalize your changes, click Save.
