@@ -36,6 +36,7 @@ The API key is a unique identifier that authenticates requests associated with y
 Restricting API keys adds security to your application by ensuring only authorized requests are made with your API key. We strongly recommend that you follow the instructions to set restrictions for your API keys. For more information, see API security best practices.
 
 **To restrict an API key**
+
 1. Go to the Google Maps Platform > Credentials page.
    https://console.cloud.google.com/projectselector2/google/maps-apis/credentials
 
