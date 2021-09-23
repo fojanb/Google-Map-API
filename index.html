@@ -8,20 +8,44 @@
   </head>
   <body>
     <h1>My First Google Map</h1>
-    <div id="googleMap" style="width: 100%; height: 400px"></div>
+    <div id="googleMap" style="width: 100%; min-height: 100vh"></div>
     <script>
+      // JSON data:
+      let cities = [
+        {
+          coords: { lat: 49.24966, lon: -123.11934 },
+          iconImg:
+            "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+          name: "Vancouver",
+        },
+        {
+          coords: { lat: 49.05798, lon: -122.25257 },
+          name: "Abbotsford",
+        },
+        {
+          coords: { lat: 49.16638, lon: -121.95257 },
+          name: "Chilliwack",
+        },
+      ];
       function myMap() {
         // Vancouver latitude and longitude
         let vancouverLatLan = new google.maps.LatLng(49.24966, -123.11934);
-        var mapProp = {
+        let mapProp = {
           center: vancouverLatLan,
           zoom: 8,
         };
         // The map, centered at Vancouver
-        var map = new google.maps.Map(
+        let map = new google.maps.Map(
           document.getElementById("googleMap"),
           mapProp
         );
+        google.maps.event.addListener(map, "click", (event) => {
+          const marker = new google.maps.Marker({
+            position: event.latLng,
+            map: map,
+          });
+        });
+
         // const infoWindow = new google.maps.InfoWindow({
         //   content: `<p>Welcome to Vancouver</p>`,
         // });
@@ -34,8 +58,11 @@
         // marker.addListener("click", () => {
         //   infoWindow.open(map, marker);
         // });
-        // Add Marker Function
-        const addMarker = (props) => {
+        cities.map((city) => {
+          addMarkerAndInfo(city);
+        });
+        // Add Marker and Info Function
+        function addMarkerAndInfo(props) {
           // The marker, positioned at coords
           const marker = new google.maps.Marker({
             position: new google.maps.LatLng(
@@ -43,18 +70,20 @@
               props.coords.lon
             ),
             map: map,
-            icon: props.iconImg,
+            // icon: props.iconImg,
           });
-        };
-        addMarker({
-          coords: { lat: 49.24966, lon: -123.11934 },
-          iconImg:
-            "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-        });
-        addMarker({ coords: { lat: 49.05798, lon: -122.25257 } });
-        addMarker({ coords: { lat: 49.16638, lon: -121.95257 } });
+          if (props.iconImg) {
+            marker.setIcon(props.iconImg);
+          }
+          const infoWindow = new google.maps.InfoWindow({
+            content: `<p>Welcome to ${props.name}</p>`,
+          });
+          marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+          });
+        }
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY}&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY}}&callback=myMap"></script>
   </body>
 </html>
