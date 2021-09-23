@@ -6,10 +6,9 @@ Simple app created by HTML, CSS, JavaScript and Maps JavaScript API.
 
 Before you start using the Maps JavaScript API, you need a project with a billing account and the Maps JavaScript API enabled. To learn more, see Set up in Cloud Console.
 
-_Make sure to include your API_Key in the HTML file as below:_
+#### _Make sure to include your API_Key in the HTML file as below_:
 
 <script src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY}&callback=myMap"></script>
-
 
 #### _Doc Sources_ :
 
@@ -37,9 +36,7 @@ The API key is a unique identifier that authenticates requests associated with y
 
 ## How to restrict your Google map's API_Key ?
 
-
 Restricting API keys adds security to your application by ensuring only authorized requests are made with your API key. We strongly recommend that you follow the instructions to set restrictions for your API keys. For more information, see API security best practices.
-
 
 1. Go to the Google Maps Platform > Credentials page.
    https://console.cloud.google.com/projectselector2/google/maps-apis/credentials
@@ -49,18 +46,18 @@ Restricting API keys adds security to your application by ensuring only authoriz
 
    #### Application restrictions :
 
-   * a. To accept requests from the list of website that you supply, select HTTP
-   referrers (web sites) from the list of Application restrictions.
-   * b. Specify one or more referrer web sites. For example, _.google.com accepts all
-   sites ending in google.com, such as https://developers.google.com.
-   Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "**file_url**" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "**file_url**//path/to/_". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
+   - a. To accept requests from the list of website that you supply, select HTTP
+     referrers (web sites) from the list of Application restrictions.
+   - b. Specify one or more referrer web sites. For example, _.google.com accepts all
+     sites ending in google.com, such as https://developers.google.com.
+     Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "**file_url**" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "**file_url**//path/to/_". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
 
    #### API restrictions :
 
-   * a. Click Restrict key
-   * b. Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is  
-    not listed, you need to enable it.
-   *c. If your project uses Places Library, also select Places API. Similarly, if your
-   project uses other services in the JavaScript API (Directions Service, Distance Matrix Service, Elevation Service, and/or Geocoding Service), you must also enable and select the corresponding API in this list.
+   - a. Click Restrict key
+   - b. Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is  
+      not listed, you need to enable it.
+     \*c. If your project uses Places Library, also select Places API. Similarly, if your
+     project uses other services in the JavaScript API (Directions Service, Distance Matrix Service, Elevation Service, and/or Geocoding Service), you must also enable and select the corresponding API in this list.
 
 4. To finalize your changes, click Save.
