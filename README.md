@@ -5,6 +5,9 @@ Simple app created by HTML, CSS, JavaScript and Maps JavaScript API.
 #### _Prerequisite_ :
 
 Before you start using the Maps JavaScript API, you need a project with a billing account and the Maps JavaScript API enabled. To learn more, see Set up in Cloud Console.
+Make sure to include your API_Key in HTML as below:
+    <script src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY}&callback=myMap"></script>
+
 
 #### _Doc Sources_ :
 
